@@ -1,45 +1,157 @@
 #include <stdio.h>
+#define LF 10
 
 int main()
 {
-
-    char dgt1,dgt2,dgt3,dgt4,dgt5,dgt6,dgt7,dgt8,dgt9,dgt10,dgt11,dgt12;
     char control;
-    //char line1,line2,line3,line4,line5;
+    char dgt1,dgt2,dgt3,dgt4,dgt5,dgt6;
+    int digitNumber=0;
     int option;
-
+    int isValid;
 
     printf("Welcome to MAC analyzer!\n");
 
-    while(option != 5)
+    while(option!=5)
     {
-        printf("Please enter a MAC address: ");
-        dgt1=90,dgt2=90,dgt3=90,dgt4=90,dgt5=90,dgt6=90,dgt7=90,dgt8=90,dgt9=90,dgt10=90,dgt11=90,dgt12=90;
         fflush(stdin);
-        scanf("%c%c-%c%c-%c%c-%c%c-%c%c-%c%c",&dgt1,&dgt2,&dgt3,&dgt4,&dgt5,&dgt6,&dgt7,&dgt8,&dgt9,&dgt10,&dgt11,&dgt12);
-        //printf("%d",dgt1);
+        printf("Please enter a MAC address: ");
+        control=0;
 
-        if(((dgt1 >= 48 && dgt1<=57) || (dgt1 >= 65 && dgt1<=70))
-           &&((dgt2 >= 48 && dgt2<=57) || (dgt2 >= 65 && dgt2<=70))
-           //&&(line1=='-')
-           &&((dgt3 >= 48 && dgt3<=57) || (dgt3 >= 65 && dgt3<=70))
-           &&((dgt4 >= 48 && dgt4<=57) || (dgt4 >= 65 && dgt4<=70))
-           //&&(line2=='-')
-           &&((dgt5 >= 48 && dgt5<=57) || (dgt5 >= 65 && dgt5<=70))
-           &&((dgt6 >= 48 && dgt6<=57) || (dgt6 >= 65 && dgt6<=70))
-           //&&(line3=='-')
-           &&((dgt7 >= 48 && dgt7<=57) || (dgt7 >= 65 && dgt7<=70))
-           &&((dgt8 >= 48 && dgt8<=57) || (dgt8 >= 65 && dgt8<=70))
-           //&&(line4=='-')
-           &&((dgt9 >= 48 && dgt9<=57) || (dgt9 >= 65 && dgt9<=70))
-           &&((dgt10 >= 48 && dgt10<=57) || (dgt10 >= 65 && dgt10<=70))
-           //&&(line5=='-')
-           &&((dgt11 >= 48 && dgt11<=57) || (dgt11 >= 65 && dgt11<=70))
-           &&((dgt12 >= 48 && dgt12<=57) || (dgt12 >= 65 && dgt12<=70)))
-           /*&&(control == '\n'))*/
+
+        while(control != LF)
+        {
+            scanf("%c", &control);
+            digitNumber++;
+
+            switch(digitNumber)
+            {
+                case 1:
+                    dgt1 = control;
+                    break;
+                case 2:
+                    dgt2 = control;
+                    break;
+                case 4:
+                    dgt3 = control;
+                    break;
+                case 5:
+                    dgt4 = control;
+                    break;
+                case 7:
+                    dgt5 = control;
+                    break;
+                case 8:
+                    dgt6 = control;
+                    break;
+                default:
+                    break;
+            }
+
+            if(((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==1)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==2)
+            {
+                isValid=0;
+                break;
+            }
+            else if (control != 45 && digitNumber==3)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==4)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==5)
+            {
+                isValid=0;
+                break;
+            }
+            else if (control != 45 && digitNumber==6)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==7)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==8)
+            {
+                isValid=0;
+                break;
+            }
+            else if (control != 45 && digitNumber==9)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==10)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==11)
+            {
+                isValid=0;
+                break;
+            }
+            else if (control != 45 && digitNumber==12)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==13)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==14)
+            {
+                isValid=0;
+                break;
+            }
+            else if (control != 45 && digitNumber==15)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==16)
+            {
+                isValid=0;
+                break;
+            }
+            else if (((control >= 48 && control<=57) || (control >= 65 && control<=70))!=1 && digitNumber==17)
+            {
+                isValid=0;
+                break;
+            }
+            else if (control != '\n' && digitNumber==18)
+            {
+                isValid=0;
+                break;
+            }
+            else if(digitNumber!=18)
+            {
+                isValid=0;
+            }
+            else
+            {
+                isValid=1;
+                break;
+            }
+        }
+
+        if(isValid)
         {
             option = 6;
-            while(option != 5 && option != 0)
+            while(option!=5 && option != 0)
             {
                 printf("==================\n1. Is It Unicast or Multicast?\n2. Is It Global or Local?\n3. What is the Manufacturer Info?\n4. Enter Another MAC address\n5. Exit\n==================\n");
                 printf("What would you like to do? ");
@@ -99,16 +211,22 @@ int main()
                         option = 5;
                         break;
                     default:
-                        printf("It is not valid option!\n");
                         break;
                 }
-
             }
         }
         else
         {
+            dgt1 = 0;
+            dgt2 = 0;
+            dgt3 = 0;
+            dgt4 = 0;
+            dgt5 = 0;
+            dgt6 = 0;
+
             printf("This is not a valid MAC address!\n");
         }
+        digitNumber = 0;
     }
     return 0;
 }
