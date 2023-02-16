@@ -1,3 +1,5 @@
+//This game was made without using arrays, the challenging part of this assignment was that.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
